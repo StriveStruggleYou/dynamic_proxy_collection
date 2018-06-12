@@ -11,6 +11,8 @@ import javassist.NotFoundException;
 
 /**
  * Created by manager on 2018/6/12.
+ * 实现链接如下：https://www.ibm.com/developerworks/cn/java/j-dyn0916/
+ *
  */
 public class JassistTiming {
 
