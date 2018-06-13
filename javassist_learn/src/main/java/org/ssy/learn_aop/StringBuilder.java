@@ -1,4 +1,4 @@
-package org.ssy.learn_demo;
+package org.ssy.learn_aop;
 
 /**
  * Created by manager on 2018/6/12.

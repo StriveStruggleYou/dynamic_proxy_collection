@@ -1,4 +1,4 @@
-package org.ssy.learn_demo;
+package org.ssy.learn_aop;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -19,7 +19,7 @@ public class JassistTiming {
   public static void main(String[] argv)
       throws IOException, CannotCompileException, NotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
 // start by getting the class file and method
-    String clss = "org.ssy.learn_demo.StringBuilder";
+    String clss = "org.ssy.learn_aop.StringBuilder";
     String mname = "buildString";
     CtClass clas = ClassPool.getDefault().get(clss);
 // add timing interceptor to the class
