@@ -3,14 +3,16 @@ package org.ssy.learn_loadclass;
 /**
  * Created by manager on 2018/6/13.
  */
+
 import javassist.ClassPool;
 import javassist.Loader;
 import junit.framework.*;
 import java.lang.reflect.Method;
 
 public class JvstTestRoot extends TestCase {
+
   // the directory where all compiled class files are found.
-  public static final String PATH = "../../../../../../target/test-classes/";
+  public static final String PATH = "/Users/manager/dynamic_proxy_collection/javassist_learn/target/classes";
 
   // the directory where javassist.jar is found.
   public static final String JAR_PATH = "../../";
@@ -45,14 +47,14 @@ public class JvstTestRoot extends TestCase {
   protected int invoke(Object target, String method) throws Exception {
     Method m = target.getClass().getMethod(method, new Class[0]);
     Object res = m.invoke(target, new Object[0]);
-    return ((Integer)res).intValue();
+    return ((Integer) res).intValue();
   }
 
   protected int invoke(Object target, String method, int arg)
       throws Exception {
     Method m =
-        target.getClass().getMethod(method, new Class[] { int.class });
-    Object res = m.invoke(target, new Object[] { Integer.valueOf(arg)});
+        target.getClass().getMethod(method, new Class[]{int.class});
+    Object res = m.invoke(target, new Object[]{Integer.valueOf(arg)});
     return ((Integer) res).intValue();
   }
 }
